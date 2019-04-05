@@ -9,7 +9,7 @@ function twoSum($nums, $target)
             if($nums[$i] + $nums[$j] == $target){
                 return [$i, $j];
             }
-            // 使用以下方法优化后运行时间减少到2164 ms
+            // use the following code, the runtime will be 2164 ms
             // $temp = $target - $nums[$i];
             // if($nums[$j] == $temp){
             //     return [$i, $j];
