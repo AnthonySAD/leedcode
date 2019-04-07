@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum
+public class Answer
 {
     public static void main(String[] args)
     {

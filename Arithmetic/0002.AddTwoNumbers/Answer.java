@@ -1,6 +1,6 @@
 import ListNode;
 
-public class AddTwoNumbers
+public class Answer
 {
 
     //10 ms	45 MB
