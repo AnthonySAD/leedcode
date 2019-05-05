@@ -36,7 +36,7 @@ public class Solution
 
             //先判断非边界情况
             //当b的左集合最大值大于a的右集合最小值时,需要增大a的右集合的最小值,既aP右移,所以把aP的左边界右移到aP+1
-            //a,b的左集合长度为aP,bP,所以下标为aP-1,bP-1
+            //a,b的左集合长度为aP,bP,所以最大下标为aP-1,bP-1
             if (aP < aPMax && b[bP-1] > a[aP]){
                 aPMin = aP + 1;
             }
@@ -44,7 +44,7 @@ public class Solution
             else if (aP > aPMin && a[aP-1] > b[bP]) {
                 aPMax = aP - 1;
             }
-            //当使用二分法求出的值为边界时,则此时二分法已无法进行下去了,同时本题必然有解,所以此值就为正确答案
+            //当使用二分法求出的值为边界时，则此时二分法的左右边界已重合，已无法进行下去了，同时本题必然有解，所以此值就为正确答案
             else {
                 int maxLeft;
                 int minRight;
@@ -58,7 +58,7 @@ public class Solution
                 }
 
                 //当集合总数为奇数时，则中位数则为maxLeft。
-                //因为之前计算半长的时候，在实际数值增加了0.5，这将导致左集合比右集合多一个值
+                //因为之前计算半长的时候，实际数值增加了0.5，这将导致左集合比右集合多一个值，及中位数为maxLeft
                 if ((aLen + bLen) % 2 == 1) {
                     return maxLeft;
                 }

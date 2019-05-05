@@ -25,7 +25,7 @@
 - bP = (aLen + bLen)/2 - aP(如果总数为奇数,则bP = (aLen + bLen + 1)/2 - aP)
 - 当aP为定值时，bP为唯一解，因此本题变为了使用二分法求出aP的位置。
 - aP需要满足的条件为:(aP-1)的值 <= bP的值且(bP-1)的值 <= aP的值
-- 当aLen + bLen为奇数时,则最终答案为max(aP-1, bP-1),当aLen + bLen为偶数时,则最终答案为(max(aP-1, bP-1) + min(aP, bP))/2,
+- 当aLen + bLen为奇数时,则最终答案为max(aP-1, bP-1),当aLen + bLen为偶数时,则最终答案为(max(aP-1, bP-1) + min(aP, bP))/2
 
 # 总结
 
