@@ -6,6 +6,9 @@ $answer = solute($s, $numRows);
 echo $answer;
 function solute($s, $numRows)
 {
+    if($numRows == 1){
+        return $s;
+    }
     for($i = 0; $i < $numRows; $i ++){
         $data[$i] = '';
     }
